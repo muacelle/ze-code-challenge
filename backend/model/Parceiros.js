@@ -10,5 +10,5 @@ const parceirosSchema = new Schema({
     address: Object
 })
 
-const Parceiros = model('parceiros', parceirosSchema)
+const Parceiros = mongoose.model('parceiros', parceirosSchema)
 export default Parceiros
