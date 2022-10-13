@@ -9,15 +9,14 @@ const getFunction = asyncHandler(async (req, res) => {
 
 // Criar novo parceiro
 const setFunction = asyncHandler(async (req, res) => {
-    if (!req.body.id) {
-        console.log(req.body.id)
-        res.status(400)
-        throw new Error(`Please add a text field. ${req.body.id}`)
-    }
+    const uniqueDocument = await Parceiros.findOne({document: req.body.document})
+    if (uniqueDocument) {res.status(400).send('Duplicate document.')}
 
     const results = await Parceiros.create({
         id: req.body.id,
-        tradingName: req.body.tradingName
+        tradingName: req.body.tradingName,
+        ownerName: req.body.ownerName,
+        document: req.body.document
     })
 
     res.status(200).json(results)
