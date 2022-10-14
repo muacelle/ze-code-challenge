@@ -1,6 +1,7 @@
 import express from 'express'
 import * as dotenv from 'dotenv'
-import { getFunction, setFunction, updateFunction, deleteFunction } from './controllers/get.js'
+import { novoParceiro } from './controllers/post.js'
+import { buscarParceiro } from './controllers/get.js'
 import connectDB from './config/db.js'
 
 dotenv.config()
@@ -11,9 +12,9 @@ const app = express()
 
 app.use(express.json())
 
-app.get('/', getFunction)
+app.post('/', novoParceiro)
 
-app.post('/', setFunction)
+app.get('/', buscarParceiro)
 
 app.put('/:id', updateFunction)
 
