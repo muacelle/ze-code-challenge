@@ -1,9 +1,10 @@
+import Parceiros from '../model/Parceiros.js'
 import asyncHandler from 'express-async-handler'
 
-// Retornar todos os parceiros na db
-const buscarParceiro = asyncHandler(async (req, res) => {
-    const results = await Parceiros.find()
+// Carregar parceiro pelo id
+const carregarParceiro = asyncHandler(async (req, res) => {
+    const results = await Parceiros.findOne({ id: req.params.id })
     res.status(200).json(results)
 })
 
-export { buscarParceiro }
+export { carregarParceiro }

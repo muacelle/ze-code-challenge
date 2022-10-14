@@ -2,7 +2,7 @@ import mongoose from "mongoose"
 const { Schema, model } = mongoose
 
 const parceirosSchema = new Schema({
-    id: { type: Number, required: true, min: 1, unique: true },
+    id: { type: Number, required: true, unique: true, min: 1 },
     tradingName: { type: String, required: true },
     ownerName: { type: String, required: true },
     document: { type: String, required: true },
@@ -14,7 +14,7 @@ const parceirosSchema = new Schema({
         type: { type: String, required: true },
         coordinates: { type: Array, required: true }
     }
-})
+}, { versionKey: false })
 
 // Pq 'unique: true' funciona pra id mas não funciona pra document?
 
