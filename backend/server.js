@@ -1,6 +1,6 @@
 import express from 'express'
 import * as dotenv from 'dotenv'
-import { novoParceiro } from './controllers/post.js'
+import { novoParceiro } from './controllers/criar.js'
 import { carregarParceiro } from './controllers/carregar.js'
 import { buscarParceiro } from './controllers/buscar.js'
 import connectDB from './config/db.js'
