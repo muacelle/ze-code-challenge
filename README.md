@@ -1,5 +1,6 @@
 ## Back-end Code Challenge - Zé Delivery
 [Link](https://github.com/ZXVentures/ze-code-challenges/blob/47c40db24cb8789698a255e023af437e04491a35/backend.md)
+
 Desenvolver um serviço que disponibilize uma API REST ou GraphQL que implemente as seguintes funcionalidades:
 ### Funcionalidades
 1. Criar Parceiro
