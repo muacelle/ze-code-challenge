@@ -7,6 +7,6 @@
 ### Dependências
 - [mongoose](https://mongoosejs.com/)
 - [express](https://www.npmjs.com/package/express)
-- [express async handler] (https://www.npmjs.com/package/express-async-handler/v/1.1.4)
-- [dotenv] (https://www.npmjs.com/package/dotenv)
-- [turf] (https://turfjs.org/)
+- [express async handler](https://www.npmjs.com/package/express-async-handler/v/1.1.4)
+- [dotenv](https://www.npmjs.com/package/dotenv)
+- [turf](https://turfjs.org/)
